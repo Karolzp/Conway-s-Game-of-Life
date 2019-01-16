@@ -1,25 +1,31 @@
 package com.Model;
 
 public class Board {
-    private Cell[][] board;
-    int numberOfColumns;
-    int numberOfRows;
+    private Cell[][] boardOfCells;
+    private int numberOfRows = 30;
+    private int numberOfColumns = 30;
 
-    public Board(int numberOfColumns, int numberOfRows){
-        board = new Cell[numberOfRows][numberOfColumns];
-        this.numberOfColumns = numberOfColumns;
-        this.numberOfRows = numberOfRows;
+    public Board(){
+        boardOfCells = new Cell[numberOfRows][numberOfColumns];
         fillBoardWithCells();
     }
 
-    public Cell[][] getBoard() {
-        return board;
+    public Cell[][] getboardOfCells() {
+        return boardOfCells;
+    }
+
+    public int getNumberOfRows() {
+        return numberOfRows;
+    }
+
+    public int getNumberOfColumns() {
+        return numberOfColumns;
     }
 
     private void fillBoardWithCells(){
         for(int y = 0; y < numberOfRows; y++){
             for (int x = 0; x < numberOfColumns; x++){
-                board[y][x] = new Cell();
+                boardOfCells[y][x] = new Cell();
             }
         }
     }
@@ -33,7 +39,7 @@ public class Board {
         for(int y = 0; y < numberOfRows; y++){
             for (int x = 0; x < numberOfColumns; x++){
 
-                Cell actualCell = board[y][x];
+                Cell actualCell = boardOfCells[y][x];
 
                 if (actualCell.isAlive() && (actualCell.getNeighbours() == 2 || actualCell.getNeighbours() == 3)) {
                     continue;
@@ -51,7 +57,7 @@ public class Board {
     }
 
     private void countNeighboursForCell(int x, int y){
-        Cell actualCell = board[y][x];
+        Cell actualCell = boardOfCells[y][x];
         int neighbours = 0;
 
         for (int i = -1; i <= 1; i++) {
@@ -59,7 +65,7 @@ public class Board {
 
                 if (y + i >= 0 && y + i < numberOfRows && x + j >= 0 && x + j < numberOfColumns) {
 
-                    Cell neighbourCell = board[y + i][x + j];
+                    Cell neighbourCell = boardOfCells[y + i][x + j];
                     if (neighbourCell.isAlive() && neighbourCell != actualCell) {
                         neighbours++;
                     }

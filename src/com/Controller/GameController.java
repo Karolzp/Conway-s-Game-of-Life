@@ -21,8 +21,7 @@ public class GameController implements Initializable {
 
         this.StaticMainStage = this.MainStage;
         BoardController boardController = new BoardController();
-        GameLoop gameLoop = new GameLoop();
-
+        GameLoop gameLoop = new GameLoop(boardController);
 
     }
 }
