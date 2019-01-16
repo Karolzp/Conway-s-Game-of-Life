@@ -1,4 +1,4 @@
-package com.Model;
+package com.Controller;
 
 public class GameLoop {
 }

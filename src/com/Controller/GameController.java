@@ -1,6 +1,5 @@
 package com.Controller;
 
-import com.Model.GameLoop;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
