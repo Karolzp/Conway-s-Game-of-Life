@@ -1,8 +1,5 @@
 package com.View;
 
-
-import javafx.event.EventHandler;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
@@ -11,7 +8,7 @@ public class CellView {
     private Color alive = Color.BLACK;
     private Color dead = Color.WHITE;
 
-    public CellView(){
+    public CellView() {
         this.cellGraphicRepresentation.setHeight(15);
         this.cellGraphicRepresentation.setWidth(15);
         this.makeCellDead();
@@ -29,7 +26,4 @@ public class CellView {
         this.cellGraphicRepresentation.setFill(dead);
     }
 
-    public EventHandler<MouseEvent> clickedOnCell = e -> {
-
-    };
 }

@@ -1,7 +1,6 @@
 package com.View;
 
 import com.Controller.GameController;
-import com.Model.Board;
 import com.Model.Cell;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -14,7 +13,7 @@ public class BoardView {
     private CellView[][] cellViewArray;
     private GridPane gridPane = new GridPane();
 
-    public BoardView(int numberOfRows, int numberOfColumns){
+    public BoardView(int numberOfRows, int numberOfColumns) {
         this.numberOfRows = numberOfRows;
         this.numberOfColumns = numberOfColumns;
         cellViewArray = new CellView[numberOfRows][numberOfColumns];
@@ -26,7 +25,7 @@ public class BoardView {
         return cellViewArray;
     }
 
-    private void setUpGrid(){
+    private void setUpGrid() {
         gridPane.setStyle("-fx-background-color: grey");
         gridPane.setHgap(1);
         gridPane.setVgap(1);
@@ -35,7 +34,7 @@ public class BoardView {
         GameController.StaticMainStage.setCenter(gridPane);
     }
 
-    private void displayBoardInGridPane(){
+    private void displayBoardInGridPane() {
         for (int y = 0; y < numberOfColumns; y++) {
             for (int x = 0; x < numberOfRows; x++) {
                 CellView cellView = new CellView();
@@ -43,21 +42,17 @@ public class BoardView {
                 gridPane.add(cellView.getCellGraphicRepresentation(), x, y);
             }
         }
-
     }
 
-    public void updateBoardView(Cell[][] boardOfCells){
+    public void updateBoardView(Cell[][] boardOfCells) {
         for (int y = 0; y < numberOfColumns; y++) {
             for (int x = 0; x < numberOfRows; x++) {
-                if (boardOfCells[y][x].isAlive()){
+                if (boardOfCells[y][x].isAlive()) {
                     cellViewArray[y][x].makeCellAlive();
                 } else {
-
                     cellViewArray[y][x].makeCellDead();
                 }
             }
         }
     }
-
-
 }

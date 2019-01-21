@@ -13,7 +13,6 @@ public class BoardController {
         this.board = new Board();
         this.boardView = new BoardView(board.getNumberOfRows(), board.getNumberOfColumns());
         setUpOnMouseEvents();
-
     }
 
     public void newGeneration(){
@@ -25,7 +24,6 @@ public class BoardController {
         CellView[][] cellViewArray = this.boardView.getCellViewArray();
         for (int y = 0; y < board.getNumberOfRows(); y++) {
             for (int x = 0; x < board.getNumberOfColumns(); x++) {
-
                 int finalY = y;
                 int finalX = x;
                 cellViewArray[y][x].getCellGraphicRepresentation().setOnMouseClicked(event -> {
@@ -35,6 +33,4 @@ public class BoardController {
             }
         }
     }
-
-
 }

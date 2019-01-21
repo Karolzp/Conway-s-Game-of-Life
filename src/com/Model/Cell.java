@@ -2,7 +2,7 @@ package com.Model;
 
 public class Cell {
     private boolean isAlive = false;
-    private int neighbours  = 0;
+    private int neighbours = 0;
 
     public boolean isAlive() {
         return isAlive;
