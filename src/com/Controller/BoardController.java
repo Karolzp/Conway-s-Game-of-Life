@@ -31,11 +31,18 @@ public class BoardController {
             for (int x = 0; x < board.getNumberOfColumns(); x++) {
                 int finalY = y;
                 int finalX = x;
-                cellViewArray[y][x].getCellGraphicRepresentation().setOnMouseClicked(event -> {
-                    board.getboardOfCells()[finalY][finalX].setAlive(true);
-                    boardView.getCellViewArray()[finalY][finalX].makeCellAlive();
-                });
+                cellViewArray[y][x].getCellGraphicRepresentation().setOnMouseClicked(event -> handleClickedCell(finalX, finalY));
             }
         }
+    }
+    private void handleClickedCell(int x, int y){
+        if (board.getboardOfCells()[y][x].isAlive()){
+            board.getboardOfCells()[y][x].setAlive(false);
+            boardView.getCellViewArray()[y][x].makeCellDead();
+        } else {
+            board.getboardOfCells()[y][x].setAlive(true);
+            boardView.getCellViewArray()[y][x].makeCellAlive();
+        }
+
     }
 }
