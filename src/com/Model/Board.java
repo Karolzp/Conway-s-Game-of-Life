@@ -2,8 +2,8 @@ package com.Model;
 
 public class Board {
     private Cell[][] boardOfCells;
-    private int numberOfRows = 30;
-    private int numberOfColumns = 30;
+    private int numberOfRows = 38;
+    private int numberOfColumns = 38;
 
     public Board() {
         boardOfCells = new Cell[numberOfRows][numberOfColumns];
