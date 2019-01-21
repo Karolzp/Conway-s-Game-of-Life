@@ -1,5 +1,7 @@
 package com.Controller;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -29,6 +31,19 @@ public class GameController implements Initializable {
         this.StaticMainStage = this.MainStage;
         this.boardController = new BoardController();
         this.gameLoop = new GameLoop(boardController);
+        addListenerToSpeedSlider();
+    }
+
+    private void addListenerToSpeedSlider(){
+        speedSlider.valueProperty().addListener(new ChangeListener<Number>() {
+            @Override
+            public void changed(ObservableValue<? extends Number> observable,
+                                Number oldValue, Number newValue) {
+
+                int newSpeed = 1000 / newValue.intValue();
+                gameLoop.changeLoopSpeed(newSpeed);
+                }
+        });
     }
 
     @FXML

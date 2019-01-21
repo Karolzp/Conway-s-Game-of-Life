@@ -17,7 +17,7 @@
                   <Insets left="30.0" />
                </padding>
             </Label>
-            <Slider fx:id="speedSlider" majorTickUnit="100.0" max="1000.0" min="100.0" minorTickCount="0" showTickMarks="true" value="500.0" />
+            <Slider fx:id="speedSlider" blockIncrement="1.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" showTickMarks="true" value="5.0" />
         </items>
       </ToolBar>
    </bottom>

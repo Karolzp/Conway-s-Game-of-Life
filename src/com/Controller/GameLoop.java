@@ -31,10 +31,25 @@ public class GameLoop {
         }
     }
 
+    public void changeLoopSpeed(int newSpeed){
+
+        if(isRunning){
+            stopGame();
+            this.speed = newSpeed;
+            startGame(newSpeed);
+        }else {
+            this.speed = newSpeed;
+        }
+    }
+
     private void startGame(){
         startLoop();
         this.isRunning = true;
+    }
 
+    private void startGame(int newSpeed){
+        startLoop(newSpeed);
+        this.isRunning = true;
     }
 
     private void stopGame(){
@@ -45,6 +60,11 @@ public class GameLoop {
     private void startLoop() {
         service = Executors.newScheduledThreadPool(1);
         service.scheduleAtFixedRate(oneStep(), 0, speed, TimeUnit.MILLISECONDS);
+    }
+
+    private void startLoop(int newSpeed) {
+        service = Executors.newScheduledThreadPool(1);
+        service.scheduleAtFixedRate(oneStep(), newSpeed, speed, TimeUnit.MILLISECONDS);
     }
 
     private Runnable oneStep() {
