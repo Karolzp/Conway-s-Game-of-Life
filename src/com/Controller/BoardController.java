@@ -9,18 +9,23 @@ public class BoardController {
     private Board board;
     private BoardView boardView;
 
-    public BoardController(){
+    public BoardController() {
         this.board = new Board();
         this.boardView = new BoardView(board.getNumberOfRows(), board.getNumberOfColumns());
         setUpOnMouseEvents();
     }
 
-    public void newGeneration(){
+    public void newGeneration() {
         board.newGeneration();
         boardView.updateBoardView(board.getboardOfCells());
     }
 
-    public void setUpOnMouseEvents(){
+    public void clearBoard(){
+        this.board = new Board();
+        boardView.updateBoardView(board.getboardOfCells());
+    }
+
+    public void setUpOnMouseEvents() {
         CellView[][] cellViewArray = this.boardView.getCellViewArray();
         for (int y = 0; y < board.getNumberOfRows(); y++) {
             for (int x = 0; x < board.getNumberOfColumns(); x++) {

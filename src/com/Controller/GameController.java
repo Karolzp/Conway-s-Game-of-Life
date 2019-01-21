@@ -25,7 +25,7 @@ public class GameController implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         this.StaticMainStage = this.MainStage;
         this.boardController = new BoardController();
-        this.gameLoop = new GameLoop(boardController);
+        this.gameLoop = new GameLoop(this.boardController);
         addListenerToSpeedSlider();
     }
 
@@ -44,5 +44,12 @@ public class GameController implements Initializable {
     @FXML
     void handleStartBtn() {
         this.gameLoop.handleStartBtn(startBtn);
+    }
+
+    @FXML
+    void handleClearBtn() {
+        this.boardController.clearBoard();
+        this.gameLoop.handleClearBtn();
+        this.startBtn.setText("START");
     }
 }

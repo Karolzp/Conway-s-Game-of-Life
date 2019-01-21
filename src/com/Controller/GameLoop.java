@@ -28,6 +28,12 @@ public class GameLoop {
         }
     }
 
+    public void handleClearBtn(){
+        if (isRunning){
+            stopGame();
+        }
+    }
+
     public void changeLoopSpeed(int newSpeed) {
         if (isRunning) {
             stopGame();
