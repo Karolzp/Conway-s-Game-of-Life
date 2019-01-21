@@ -35,6 +35,7 @@ public class BoardController {
             }
         }
     }
+
     private void handleClickedCell(int x, int y){
         if (board.getboardOfCells()[y][x].isAlive()){
             board.getboardOfCells()[y][x].setAlive(false);
@@ -43,6 +44,5 @@ public class BoardController {
             board.getboardOfCells()[y][x].setAlive(true);
             boardView.getCellViewArray()[y][x].makeCellAlive();
         }
-
     }
 }

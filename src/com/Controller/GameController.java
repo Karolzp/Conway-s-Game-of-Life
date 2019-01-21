@@ -1,5 +1,6 @@
 package com.Controller;
 
+import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -51,5 +52,10 @@ public class GameController implements Initializable {
         this.boardController.clearBoard();
         this.gameLoop.handleClearBtn();
         this.startBtn.setText("START");
+    }
+
+    @FXML
+    void handleQuitBtn() {
+        System.exit(0);
     }
 }
