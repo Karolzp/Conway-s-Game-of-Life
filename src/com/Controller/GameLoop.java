@@ -10,7 +10,7 @@ public class GameLoop {
 
     private boolean isRunning = false;
     private BoardController boardController;
-    private int speed = 500;
+    private int speed = 100;
     private ScheduledExecutorService service;
 
 

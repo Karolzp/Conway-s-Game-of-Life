@@ -19,7 +19,7 @@
                   <Insets left="30.0" />
                </padding>
             </Label>
-            <Slider fx:id="speedSlider" blockIncrement="1.0" layoutX="155.0" layoutY="11.0" majorTickUnit="1.0" max="15.0" min="1.0" minorTickCount="0" showTickMarks="true" value="8.0" />
+            <Slider fx:id="speedSlider" blockIncrement="1.0" layoutX="155.0" layoutY="11.0" majorTickUnit="1.0" max="20.0" min="1.0" minorTickCount="0" showTickMarks="true" value="10.0" />
             <Button fx:id="clearBtn" alignment="CENTER_RIGHT" layoutX="450.0" layoutY="10.0" minWidth="61.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#handleClearBtn" prefWidth="61.0" text="CLEAR" wrapText="true">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />

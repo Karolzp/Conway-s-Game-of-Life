@@ -17,22 +17,22 @@ class BoardTest {
     @Test
     @DisplayName("Check next generation of glider")
     void newGenerationForGliderTest() {
-        boardModel.getboardOfCells()[2][3].setAlive(true);
-        boardModel.getboardOfCells()[3][4].setAlive(true);
-        boardModel.getboardOfCells()[4][2].setAlive(true);
-        boardModel.getboardOfCells()[4][3].setAlive(true);
-        boardModel.getboardOfCells()[4][4].setAlive(true);
+        boardModel.getBoardOfCells()[2][3].setAlive(true);
+        boardModel.getBoardOfCells()[3][4].setAlive(true);
+        boardModel.getBoardOfCells()[4][2].setAlive(true);
+        boardModel.getBoardOfCells()[4][3].setAlive(true);
+        boardModel.getBoardOfCells()[4][4].setAlive(true);
 
         boardModel.newGeneration();
 
 //        "Should create correct generation, set proper cell alive or not"
-        assertEquals(false ,boardModel.getboardOfCells()[2][3].isAlive());
-        assertEquals(true ,boardModel.getboardOfCells()[3][4].isAlive());
-        assertEquals(false ,boardModel.getboardOfCells()[4][2].isAlive());
-        assertEquals(true ,boardModel.getboardOfCells()[4][3].isAlive());
-        assertEquals(true ,boardModel.getboardOfCells()[4][4].isAlive());
-        assertEquals(true ,boardModel.getboardOfCells()[5][3].isAlive());
-        assertEquals(true ,boardModel.getboardOfCells()[3][2].isAlive());
+        assertEquals(false ,boardModel.getBoardOfCells()[2][3].isAlive());
+        assertEquals(true ,boardModel.getBoardOfCells()[3][4].isAlive());
+        assertEquals(false ,boardModel.getBoardOfCells()[4][2].isAlive());
+        assertEquals(true ,boardModel.getBoardOfCells()[4][3].isAlive());
+        assertEquals(true ,boardModel.getBoardOfCells()[4][4].isAlive());
+        assertEquals(true ,boardModel.getBoardOfCells()[5][3].isAlive());
+        assertEquals(true ,boardModel.getBoardOfCells()[3][2].isAlive());
 
 
     }

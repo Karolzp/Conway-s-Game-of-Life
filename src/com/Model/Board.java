@@ -1,9 +1,5 @@
 package com.Model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 public class Board {
     private Cell[][] boardOfCells;
     private int numberOfRows = 45;
@@ -14,7 +10,7 @@ public class Board {
         fillBoardWithCells();
     }
 
-    public Cell[][] getboardOfCells() {
+    public Cell[][] getBoardOfCells() {
         return boardOfCells;
     }
 
@@ -46,11 +42,8 @@ public class Board {
 
                 if (actualCell.isAlive() && (actualCell.getNeighbours() == 2 || actualCell.getNeighbours() == 3)) {
                     continue;
-                    //new dot is born
                 } else if (!actualCell.isAlive() && actualCell.getNeighbours() == 3) {
                     actualCell.setAlive(true);
-
-                    //dot dies due to overpopulation, underpopulation or just doesn't born.
                 } else {
                     actualCell.setAlive(false);
                 }
