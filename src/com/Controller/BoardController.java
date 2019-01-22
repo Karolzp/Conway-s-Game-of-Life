@@ -20,7 +20,7 @@ public class BoardController {
         boardView.updateBoardView(board.getboardOfCells());
     }
 
-    public void clearBoard(){
+    public void clearBoard() {
         this.board = new Board();
         boardView.updateBoardView(board.getboardOfCells());
     }
@@ -36,13 +36,18 @@ public class BoardController {
         }
     }
 
-    private void handleClickedCell(int x, int y){
-        if (board.getboardOfCells()[y][x].isAlive()){
+    private void handleClickedCell(int x, int y) {
+        if (board.getboardOfCells()[y][x].isAlive()) {
             board.getboardOfCells()[y][x].setAlive(false);
             boardView.getCellViewArray()[y][x].makeCellDead();
         } else {
             board.getboardOfCells()[y][x].setAlive(true);
             boardView.getCellViewArray()[y][x].makeCellAlive();
         }
+    }
+
+    public void createGosperGliderGun() {
+        board.createGosperGliderGun();
+        boardView.updateBoardView(board.getboardOfCells());
     }
 }

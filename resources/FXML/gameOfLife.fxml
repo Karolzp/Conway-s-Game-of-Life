@@ -7,8 +7,9 @@
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="MainStage" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controller.GameController">
+<BorderPane fx:id="MainStage" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.Controller.GameController">
    <bottom>
       <Pane prefHeight="46.0" prefWidth="600.0" style="-fx-background-color: #d9d9d9;" BorderPane.alignment="CENTER">
          <children>
@@ -18,7 +19,7 @@
                   <Insets left="30.0" />
                </padding>
             </Label>
-            <Slider fx:id="speedSlider" blockIncrement="1.0" layoutX="155.0" layoutY="11.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" showTickMarks="true" value="5.0" />
+            <Slider fx:id="speedSlider" blockIncrement="1.0" layoutX="155.0" layoutY="11.0" majorTickUnit="1.0" max="15.0" min="1.0" minorTickCount="0" showTickMarks="true" value="8.0" />
             <Button fx:id="clearBtn" alignment="CENTER_RIGHT" layoutX="450.0" layoutY="10.0" minWidth="61.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#handleClearBtn" prefWidth="61.0" text="CLEAR" wrapText="true">
                <cursor>
                   <Cursor fx:constant="DEFAULT" />
@@ -28,4 +29,15 @@
          </children>
       </Pane>
    </bottom>
+   <top>
+      <Pane prefHeight="31.0" prefWidth="600.0" style="-fx-background-color: #d9d9d9;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="gosperGliderGunBtn" layoutX="21.0" layoutY="4.0" mnemonicParsing="false" onAction="#handleGosperGliderGunBtn" text=" Gosper Glider Gun">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </top>
 </BorderPane>

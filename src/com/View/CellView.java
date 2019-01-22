@@ -9,8 +9,8 @@ public class CellView {
     private Color dead = Color.WHITE;
 
     public CellView() {
-        this.cellGraphicRepresentation.setHeight(13);
-        this.cellGraphicRepresentation.setWidth(13);
+        this.cellGraphicRepresentation.setHeight(10);
+        this.cellGraphicRepresentation.setWidth(10);
         this.makeCellDead();
     }
 

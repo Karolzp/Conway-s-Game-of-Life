@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Slider;
 import javafx.scene.layout.BorderPane;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -52,6 +53,11 @@ public class GameController implements Initializable {
         this.boardController.clearBoard();
         this.gameLoop.handleClearBtn();
         this.startBtn.setText("START");
+    }
+
+    @FXML
+    void handleGosperGliderGunBtn() {
+        this.boardController.createGosperGliderGun();
     }
 
     @FXML
