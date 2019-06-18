@@ -1,4 +1,4 @@
-#Canways Game Of Life
+# Canways Game Of Life
 
 The game is a zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves, or, for advanced players, by creating patterns with particular properties.<br /> 
 For more information visit - https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life.
@@ -12,7 +12,7 @@ The game starts with a blank board filled with little white squares. It allows t
 * JavaFx
 
 ## Screenshots:
-Start screen:
-![alt text](https://github.com/Karolzp/Conway-s-Game-of-Life/blob/master/screenshots/Screenshot1.png)
-Gosper glider gun screen:
+Start screen:<br /> 
+![alt text](https://github.com/Karolzp/Conway-s-Game-of-Life/blob/master/screenshots/Screenshot1.png)<br /> 
+Gosper glider gun screen:<br /> 
 ![alt text](https://github.com/Karolzp/Conway-s-Game-of-Life/blob/master/screenshots/Screenshot2.png)
