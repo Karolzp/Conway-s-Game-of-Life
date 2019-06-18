@@ -14,5 +14,5 @@ The game starts with a blank board filled with little white squares. It allows t
 ## Screenshots:
 Start screen:<br /> 
 ![alt text](https://github.com/Karolzp/Conway-s-Game-of-Life/blob/master/screenshots/Screenshot1.png)<br /> 
-Gosper glider gun screen:<br /> 
+Gosper Glider Gun screen:<br /> 
 ![alt text](https://github.com/Karolzp/Conway-s-Game-of-Life/blob/master/screenshots/Screenshot2.png)
