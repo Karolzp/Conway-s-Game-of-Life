@@ -5,7 +5,8 @@ For more information visit - https://en.wikipedia.org/wiki/Conway%27s_Game_of_Li
 
 ## About project:
 The goal was to create my own implementation of Conway's game of life in Java with JavaFX as a GUI to practice MVC (Model, View, Controller) design pattern in a desktop application and learn writing tests(TDD).<br />
-The game starts with a blank board filled with little white squares. It allows the user to setup the initial state by clicking on squares and turning them black, thereby activating them. The game have a pause option, and an option to change its speed.
+The game starts with a blank board filled with little white squares. It allows the user to setup the initial state by clicking on squares and turning them black, thereby activating them. The game have a pause option, and an option to change its speed.<br/>
+The project was created during my education in Codecool.
 
 ## Used technology:
 * Java
