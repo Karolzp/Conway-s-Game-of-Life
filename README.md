@@ -9,7 +9,7 @@ It is my own implementation of Conway's game of life in Java. The project was cr
 The goal was to:
 * practice OOP concept in Java
 * practice MVC (Model, View, Controller) design pattern in a desktop application
-* create game loop (To do this, I used threads)
+* create game loop (To do this, I used threads) with the option to pause and change the speed
 * learn writing tests (TDD)
 * use JavaFx as a GUI
 
