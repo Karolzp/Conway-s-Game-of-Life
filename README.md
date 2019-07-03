@@ -7,7 +7,7 @@ For more information visit - https://en.wikipedia.org/wiki/Conway%27s_Game_of_Li
 ## About project:
 It is my own implementation of Conway's game of life in Java with JavaFX as a GUI.
 The goal was to:
-* practice OOP
+* practice OOP concept in Java
 * practice MVC (Model, View, Controller) design pattern in a desktop application
 * create game loop (To do this, I used threads)
 * learn writing tests (TDD)
