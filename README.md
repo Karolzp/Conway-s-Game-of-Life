@@ -20,6 +20,9 @@ The game starts with a blank board filled with little white squares. It allows t
 * Java
 * JavaFx
 
+## How it works?
+![alt text](https://github.com/Karolzp/Conway-s-Game-of-Life/blob/master/screenshots/drivex.gif)<br />
+
 ## Screenshots:
 Start screen:<br /> 
 ![alt text](https://github.com/Karolzp/Conway-s-Game-of-Life/blob/master/screenshots/Screenshot1.png)<br /> 
